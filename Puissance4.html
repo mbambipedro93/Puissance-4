@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Style.css">
+    <script src="/JS/P4.js"></script>
+    <title>Puissance4</title>
+</head>
+
+<body>
+    <div id="BG">
+        <script>
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            const nom = params['nom'];
+            console.log('Nom:', nom);
+
+            const name = localStorage.getItem('name');
+
+            if (name) {
+                console.log('Bonjour, ' + name + ' !');
+            } else {
+                console.log('Aucun nom n\'a été stocké.');
+            }
+
+        </script>
+        <h1>Puissance4</h1>
+        <div class="score">
+            Joueur Rouge<span id="sum">
+                <script></script>
+            </span>
+            <span id="scorePR">0</span>
+            <span>Joueur Jaune (Tetsuo):</span>
+            <span id="scorePY">0</span>
+        </div>
+
+        <h2 id="winner"></h2>
+        <div id="board">
+
+
+        </div>
+
+        <div>
+            <audio autoplay="autoplay" controls="controls">
+                <source src="akiraS.mp3" />
+            </audio>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- <canvas id="canvas" width="300" height="100">
+            Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+          </canvas> -->
+    </main>
+
+</body>
+
+</html>
